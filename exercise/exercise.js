@@ -7,6 +7,7 @@ Write a function which adds a class "highlight" to the introduction paragraph
 var highlightText = function(){
   document.querySelector('.introduction').classList.add('highlight');
 }
+
 highlightText(); //uncomment me to test
 
 /*
@@ -16,6 +17,7 @@ paragraph
 var unHighlightText = function(){
   document.querySelector('.introduction').classList.remove('highlight');
 }
+
 unHighlightText(); //uncomment me to test
 
 
@@ -26,6 +28,7 @@ it will be removed; otherwise the class "highlight" is added.
 var toggleHighlight = function(){
   document.querySelector('.introduction').classList.toggle('highlight');
 }
+
 toggleHighlight(); //uncomment me to test
 
 
@@ -36,6 +39,7 @@ Write a function which returns all text content of the introduction paragraph
 var getText = function(){
   return document.querySelector('.introduction').textContent;
 }
+
 console.log(getText()); //uncomment me to test
 
 
@@ -47,6 +51,7 @@ var getNumChars = function(){
   return document.querySelector('.introduction')
     .textContent.trim().length;
 }
+
 console.log(getNumChars()); //uncomment me to test
 
 
@@ -57,6 +62,7 @@ var getNumWords = function() {
   return document.querySelector('.introduction')
     .textContent.trim().split(' ').length;
 }
+
 console.log(getNumWords()); //uncomment me to test
 
 
@@ -68,6 +74,7 @@ var getNumSentences = function(){
   return document.querySelector('.introduction')
     .textContent.trim().split('.').slice(0, -1).length;
 }
+
 console.log(getNumSentences()); //uncomment me to test
 
 /*
@@ -78,6 +85,7 @@ var containsString = function(string){
   return document.querySelector('.introduction')
     .textContent.trim().includes(string)
 }
+
 console.log(containsString('Lorem ipsum')); //true
 console.log(containsString('I want 2 break free')); //false
 
@@ -88,6 +96,7 @@ Write a function which returns the value in the `firstName` text input
 var getFirstNameValue = function(){
   return document.getElementsByName('firstName')[0].value;
 }
+
 console.log(getFirstNameValue()); //uncomment me to test
 
 
@@ -98,7 +107,8 @@ has `inputName` as the name attribute
 var getValue = function(inputName){
   return document.getElementsByName(inputName)[0].value;
 }
-getValue('lastName'); //uncomment me to test
+
+console.log(getValue('lastName')); //uncomment me to test
 
 
 /*
@@ -141,6 +151,7 @@ var getInputValues = function(className){
   };
   return result
 }
+
 console.log(getInputValues('test')); // ["John", "fake@notreal.false"]
 
 /*
@@ -153,6 +164,7 @@ var getNumElsOfClass = function(className){
     ? 0
     : document.getElementsByClassName(className).length
 }
+
 console.log(getNumElsOfClass('test')); // 2
 console.log(getNumElsOfClass(true)); // 0
 
